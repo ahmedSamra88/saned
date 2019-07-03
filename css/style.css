@@ -42,6 +42,7 @@ img{
     position: absolute;
     top: 15px;
     right: 20px;
+    z-index: 1;
 }
 /* end global style */
 /* start framework */
@@ -120,6 +121,9 @@ body{
 }
 /* end framework */
 @media screen and (max-width: 700px) {
+    .child{
+        min-width: 90vw;
+    }
     img{
         position: unset;
     }
