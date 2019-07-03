@@ -1,0 +1,56 @@
+<script type="text/javascript">
+       
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+
+
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            h = setHour(h);
+            document.getElementById('dv_time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () { startTime() }, 500);
+        }
+
+        function startDate() {
+            var today = new Date();
+            var y = today.getYear();
+            var m = today.getMonth();
+            var d = today.getDay();
+
+
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            h = setHour(h)
+            document.getElementById('dv_time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () { startTime() }, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function setHour(i) {
+            if (i == 0) {
+                i = "Õ " + "12";
+            }
+            else if (i == 12) {
+                i = "ã " + 12;
+            }
+            else if (i < 13) {
+                i = "Õ " + i;
+            }
+            else {
+                i = "ã " + (i - 12);
+            }
+            return i;
+        }
+         
+</script>
